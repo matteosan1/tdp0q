@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package tdpalio;
+
+message PContrada {
+    string nome = 1;
+    string nome_completo = 2;
+    int32 indice = 3;
+    repeated int32 status = 4;
+    repeated int32 vittorie = 5;
+    int32 giocatore = 6;
+    int32 fantino = 7;
+    repeated int32 feelings = 8;
+    //int     m_barbero;
+    //int     m_monta;
+}
+
+message PContradas {
+    repeated PContrada contrade = 1;
+}

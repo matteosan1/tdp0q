@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package tdpalio;
+
+message Offer {
+    int32 da_chi = 1;
+    int32 contro_chi = 2;
+    int32 a_vincere = 3;
+    int32 a_perdere = 4;
+}
+
+message Jockey {
+    uint32 indice = 1;
+    uint32 eta = 2;
+    string nome = 3;
+    repeated uint32 capacita = 4;         // prontezza, determinazione, bravura, killer
+    repeated uint32 score = 5;            // anni, palii corsi, palii vinti
+    repeated uint32 feelingContrade = 6;
+    int32 contrada = 7;
+    int32 infortunio = 8;
+    repeated Offer offerte = 9;
+}
+
+message Jockeys {
+    repeated Jockey fantini = 1;
+}
+

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package tdpalio;
+
+message Player {
+    string nome = 1;
+    string cognome = 2;
+    string username = 3;
+    int32 contrada = 4;
+    int32 tempo_in_carica = 5;
+    repeated uint32 score = 6;
+    bool sta_giocando = 7;
+}
+
+message Players {
+    repeated Player giocatori = 1;
+}
+

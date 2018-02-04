@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package tdpalio;
+
+message Horse {
+    uint32 indice = 1;
+    string nome = 2;
+    uint32 colore = 3;
+    uint32 eta = 4;
+    repeated uint32 capacita = 5; // scatto(ripresa), velocita(v max), precisione(capacita` di infilarsi nei pertugi), forma
+    repeated uint32 score = 6;    // tratte, palii corsi, palii vinti
+    uint32 selezione = 7;
+    uint32 coscia = 8;
+    uint32 infortunio = 9;
+}
+
+message Horses {
+    repeated Horse cavalli = 1;
+}
